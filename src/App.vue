@@ -1,5 +1,5 @@
 <template>
-  <b-container id="app">
+  <b-container id="app" class="w-75">
     <router-view />
   </b-container>
 </template>
