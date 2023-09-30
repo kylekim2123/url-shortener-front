@@ -16,10 +16,18 @@
 <script>
 export default {
   name: 'UrlDetailView',
+  props: {
+    shortUrlId: {
+      type: String
+    }
+  },
   computed: {
     getUrl() {
       return this.$store.getters.getUrl
     }
+  },
+  created() {
+    this.$store.dispatch('findShortUrlById', { shortUrlId: this.shortUrlId })
   }
 };
 </script>

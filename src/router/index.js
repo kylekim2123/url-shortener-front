@@ -10,9 +10,10 @@ const routes = [
     component: () => import('@/views/HomeView.vue'),
   },
   {
-    path: '/detail',
+    path: '/detail/:shortUrlId',
     name: 'UrlDetailView',
     component: () => import('@/views/UrlDetailView.vue'),
+    props: true,
   },
 ]
 
