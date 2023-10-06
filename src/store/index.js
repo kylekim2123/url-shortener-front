@@ -30,12 +30,12 @@ export default new Vuex.Store({
         url: `${SERVER_BASE_URL}/api/short-urls`,
         data: data,
       })
-        .then(response => router.push({ name: 'UrlDetailView', params: { shortUrlId: response.data.id } }))
+        .then(response => router.push({ name: 'UrlDetailView', params: { shortUrlKey: response.data.shortUrlKey } }))
     },
-    findShortUrlById({ commit }, { shortUrlId }) {
+    findShortUrlByKey({ commit }, { shortUrlKey }) {
       axios({
         method: 'get',
-        url: `${SERVER_BASE_URL}/api/short-urls/${shortUrlId}`,
+        url: `${SERVER_BASE_URL}/api/short-urls/${shortUrlKey}`,
       })
         .then(response => commit('SET_SHORT_URL', response.data))
     }

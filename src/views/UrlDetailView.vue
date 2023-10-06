@@ -17,7 +17,7 @@
 export default {
   name: 'UrlDetailView',
   props: {
-    shortUrlId: {
+    shortUrlKey: {
       type: String
     }
   },
@@ -27,7 +27,7 @@ export default {
     }
   },
   created() {
-    this.$store.dispatch('findShortUrlById', { shortUrlId: this.shortUrlId })
+    this.$store.dispatch('findShortUrlByKey', { shortUrlKey: this.shortUrlKey })
   }
 };
 </script>

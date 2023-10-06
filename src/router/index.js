@@ -10,7 +10,7 @@ const routes = [
     component: () => import('@/views/HomeView.vue'),
   },
   {
-    path: '/detail/:shortUrlId',
+    path: '/detail/:shortUrlKey',
     name: 'UrlDetailView',
     component: () => import('@/views/UrlDetailView.vue'),
     props: true,
